@@ -20,7 +20,7 @@ public class GetMethodQuiz08 extends HttpServlet{
 		response.setContentType("text/html");
 		response.setCharacterEncoding("utf-8");
 		PrintWriter out = response.getWriter();
-		
+		//힣
 		List<String> list = new ArrayList<>(Arrays.asList(
 		        "강남역 최고 맛집 소개 합니다.", 
 		        "오늘 기분 좋은 일이 있었네요.", 
@@ -34,11 +34,18 @@ public class GetMethodQuiz08 extends HttpServlet{
 		Iterator<String> iter = list.iterator();
 		while(iter.hasNext()) {
 			String line = iter.next();
+			//1)
 			if(line.contains(restaurant)) {
-				String bold = line.replace("맛집", "<b>맛집</b>");
+				String bold = line.replace(restaurant, "<b>"+restaurant+"</b>");
 				out.print(bold);
 				out.print("<br>");
 			}
+			
+			//2) keyword기준으로 split하여 나눔 
+//			if(line.contains(restaurant)) {
+//				String[] words = line.split(restaurant); // 0:앞문장, 1: 뒷문장
+//				out.print(words[0] + "<b>" + restaurant + "</b>" + words[1] + "<br>");
+//			}
 		}
 //		for (int i = 0; i<list.size(); i++) {
 //			if(list.get(i).contains(restaurant)) {
