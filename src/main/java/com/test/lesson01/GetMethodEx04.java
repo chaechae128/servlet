@@ -20,7 +20,7 @@ public class GetMethodEx04 extends HttpServlet {
 		String name = request.getParameter("name");
 		String birth = request.getParameter("birth");
 		String email = request.getParameter("email");
-		
+		//주석//
 		//테이블로 출력
 		out.print("<html><head><title>회원 정보</title></head><body>");
 		out.print("<table border=1>");
