@@ -16,37 +16,45 @@
 	String[] measureArr = request.getParameterValues("measure");
 	String result = "";	
 	double change;
-
-	for (int i = 0; i < measureArr.length; i++) {
-		if (measureArr[i].equals("in")) {
-			change = length * 0.393701;
-			result += change + " in,";
-		} else if (measureArr[i].equals("yd")) {
-			change = length * 0.010936;
-			result += change + " yd,";
-		} else if (measureArr[i].equals("ft")) {
-			change = length * 0.032808;
-			result += change + " ft,";
-		} else if (measureArr[i].equals("m")) {
-			change = length * 0.01;
-			result += change + " m,";
-		}
-		
-	}
 	%>
 	
 	<div class="container">
 		<h1>길이 변환 결과</h1>
 		<h3><%= length %>cm</h3>
 		<hr>
+		<h2>
+	<%
+	for (int i = 0; i < measureArr.length; i++) {
+		if (measureArr[i].equals("in")) {
+			change = length * 0.393701;
+			out.println(change + " in<br>");
+			//result += change + " in,";
+		} else if (measureArr[i].equals("yd")) {
+			change = length * 0.010936;
+			out.println(change + " yd<br>");
+			//result += change + " yd,";
+		} else if (measureArr[i].equals("ft")) {
+			change = length * 0.032808;
+			out.println(change + " ft<br>");
+			//result += change + " ft,";
+		} else if (measureArr[i].equals("m")) {
+			change = length * 0.01;
+			out.println(change + " m<br>");
+			//result += change + " m,";
+		}
 		
-		<%
+	}
+	%>
+	
+		</h2>
+		
+		<%--
 			String[] resultArr = result.split(",");
 			for (int i = 0; i < resultArr.length; i++) {
 				out.println("<h3>"+resultArr[i] +"</h3>");
 			}
 			
-		%>
+		--%>
 	</div>
 </body>
 </html>
