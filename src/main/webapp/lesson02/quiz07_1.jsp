@@ -39,10 +39,14 @@
     
     String menu = request.getParameter("menu");
     String under4 = request.getParameter("point");
+    boolean exclude = under4 != null;
+    
+   
     for (int i = 0; i<list.size(); i++) {
     	Double point = (Double)list.get(i).get("point");
-    	if (menu.equals(list.get(i).get("menu"))) {    		
-    		if (under4 != null && point <= 4.0) {
+    	if (menu.equals(list.get(i).get("menu"))) { 
+    		 //skip 조건: 체크가 되어있고 스킵되어야하는 조건이면 continue로 넘김
+    		if (exclude && point <= 4.0) {
     			continue;
     		}	 
 	%>
