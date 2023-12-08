@@ -109,7 +109,7 @@ musicInfo.put("lyricist", "아이유");
 		<tr>
 			<td><%=musicList.get(i).get("id")%></td>
 			<td><a
-				href="/lesson03/quiz02/layout2.jsp?title=<%=musicList.get(i).get("title")%>"><%=musicList.get(i).get("title")%></a></td>
+				href="/lesson03/quiz02/layout2.jsp?id=<%=musicList.get(i).get("id")%>"><%=musicList.get(i).get("title")%></a></td>
 			<td><%=musicList.get(i).get("album")%></td>
 		</tr>
 		<%

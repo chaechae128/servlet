@@ -33,6 +33,10 @@ footer {
 	height: 50px;
 }
 
+.music-info {
+	font-size:10px; clolor:#999;
+}
+
 </style>
 </head>
 
