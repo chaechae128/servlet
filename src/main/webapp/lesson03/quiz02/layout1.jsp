@@ -33,9 +33,6 @@ footer {
 	height: 50px;
 }
 
-.logo {
-	color: yellowGreen;
-}
 </style>
 </head>
 
